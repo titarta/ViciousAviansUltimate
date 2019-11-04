@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{A06E80F5-5979-ED7E-070F-F2201244D4D8}</ProjectGuid>
+    <ProjectGuid>{BFEE8725-6CDB-F58D-7EDF-738F24DE31E0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -77,65 +77,24 @@
      <Compile Include="Assets\Common\Scripts\TapHandler.cs" />
      <Compile Include="Assets\Common\Scripts\TrackableSettings.cs" />
      <Compile Include="Assets\Common\Scripts\VLog.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\Augmentations\Astronaut.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\Augmentations\Augmentation.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\Augmentations\Drone.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\Augmentations\Fissure.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\Augmentations\Habitat.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\Augmentations\OxygenTank.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\Augmentations\RockPileController.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\InteractionHelpers\DrillController.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\InteractionHelpers\FadeObject.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\StateMachineBehaviours\AstronautStateMachineBehaviour.cs" />
-     <Compile Include="Assets\SamplesResources\AugmentationAssets\Scripts\StateMachineBehaviours\AugmentationStateMachineBehaviour.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\CloudReco\Scripts\CloudContentManager.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\CloudReco\Scripts\CloudTrackableEventHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\CylinderTargets\Scripts\RotateAroundCylinder.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\GroundPlane\Scripts\GroundPlaneUI.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\GroundPlane\Scripts\PlaneManager.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\GroundPlane\Scripts\ProductPlacement.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\GroundPlane\Scripts\TouchHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\GroundPlane\Scripts\UtilityHelper.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ImageTargets\Scripts\ModelSwap.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ImageTargets\Scripts\VideoController.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ImageTargets\Scripts\VideoTrackableEventHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ModelTargets\Scripts\ModelTargetsManager.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ModelTargets\Scripts\ModelTargetsUIManager.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ModelTargets\Scripts\MT360TrackableEventHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ModelTargets\Scripts\MTAdvancedTrackableEventHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ModelTargetsTrained\Scripts\CameraDepthEnabler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ModelTargetsTrained\Scripts\MaterialSwitch.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ModelTargetsTrained\Scripts\ModelTargetAugmentationHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ModelTargetsTrained\Scripts\SimpleAnimation.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\MultiTargets\Scripts\MultiTargetTrackableEventHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\ObjectReco\Scripts\ObjectRecoTrackableEventHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\UserDefinedTargets\Scripts\FrameQualityMeter.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\UserDefinedTargets\Scripts\UDTEventHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\VirtualButtons\Scripts\VirtualButtonEventHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\VuMarks\Scripts\LookAtObject.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\VuMarks\Scripts\PanelShowHide.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\VuMarks\Scripts\VuMarkHandler.cs" />
-     <Compile Include="Assets\SamplesResources\SceneAssets\VuMarks\Scripts\VuMarkTrackableEventHandler.cs" />
+     <Compile Include="Assets\Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
+     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\TrackEventHandler.cs" />
-     <None Include="Assets\SamplesResources\SceneAssets\VirtualButtons\Shaders\Gradient.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />
-     <None Include="Assets\SamplesResources\SceneAssets\ModelTargetsTrained\Shaders\TimedDiffuseNoCull.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget360.xml" />
      <None Include="Assets\StreamingAssets\Vuforia\Vuforia_Motorcycle_Marslander.xml" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Object_OT.xml" />
-     <None Include="Assets\SamplesResources\SceneAssets\ModelTargetsTrained\Shaders\Scan.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Common\TextMeshPro\Sprites\EmojiOne Attribution.txt" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_Images.xml" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\StreamingAssets\Vuforia\testDatabaseAvians.xml" />
-     <None Include="Assets\SamplesResources\SceneAssets\ModelTargets\Shaders\RadialTexture.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -147,37 +106,37 @@
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_SDF-Surface.shader" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="VuforiaScripts">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/VuforiaScripts.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/VuforiaScripts.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="VuforiaEditorScripts">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/VuforiaEditorScripts.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/VuforiaEditorScripts.dll</HintPath>
  </Reference>
  <Reference Include="Unity.CollabProxy.Editor">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Program Files/Unity Hub/2019.2.7f2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -351,7 +310,7 @@
  <HintPath>D:/Program Files/Unity Hub/2019.2.7f2/Editor/Data/Managed/UnityEngine/UnityEngine.XRModule.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltra/Library/PackageCache/com.ptc.vuforia.engine@8.5.9/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/PackageCache/com.ptc.vuforia.engine@8.5.9/Vuforia/Plugins/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>D:/Program Files/Unity Hub/2019.2.7f2/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -710,7 +669,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="VuforiaVersionCheckerScripts.csproj">
-      <Project>{04C6C98A-84E4-797A-A81C-3B4045DF9A60}</Project>
+      <Project>{926FF44A-4C1A-5520-77B7-041828E88426}</Project>
       <Name>VuforiaVersionCheckerScripts</Name>
     </ProjectReference>
   </ItemGroup>

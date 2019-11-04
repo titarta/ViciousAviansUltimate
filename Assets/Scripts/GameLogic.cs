@@ -51,4 +51,11 @@ public class GameLogic : MonoBehaviour
         //Check user input
 
     }
+
+    void OnGUI() {
+        bool fireButton = GUI.Button(new Rect(10, 10, 100, 30), "Make it fly!");
+        if(fireButton) {
+            Debug.Log("worked");
+        }
+    }
 }

@@ -503,7 +503,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100016, guid: 815c95ecb5a599b4fa40b31fbde21a80, type: 3}
+      objectReference: {fileID: 2100000, guid: f3a5fdff252253f428be724118083694, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a4832fddde6f584a9f3baab85832f84, type: 3}
 --- !u!4 &326725142 stripped
@@ -748,7 +748,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 052b6545aeed2694bad053427f1210f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneTarget: {fileID: 1321131134}
   birdLaunchPlaceHolder: {fileID: 633987595}
   bird: {fileID: 2001015505}
   slingshotMarker: {fileID: 70860859}
@@ -1346,13 +1345,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246837231}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.647, z: 0}
+  m_LocalRotation: {x: 0.18625699, y: 0.33235267, z: 0.024592957, w: 0.9242539}
+  m_LocalPosition: {x: 0, y: 8.87, z: -9.72}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 19.144001, y: 41.301003, z: 10.3220005}
 --- !u!1001 &1315956360
 PrefabInstance:
   m_ObjectHideFlags: 0
