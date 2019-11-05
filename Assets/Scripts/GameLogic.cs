@@ -36,8 +36,13 @@ public class GameLogic : MonoBehaviour
         Vector2 birdXYpos = slingshotMarkerPos2D + slingshotBackwardDirection2D*distanceBirdToSlingshot;
 
         // Get bird Y position
-
-        float increasedAltitude = Vector2.Distance(birdXYpos,  birdMarkerPos2D);
+        float increasedAltitude = 0;
+        if(isLeft(slingshotMarkerPos2D,birdMarkerPos2D,birdXYpos )) {
+            increasedAltitude = Vector2.Distance(birdXYpos,  birdMarkerPos2D);
+        } else {
+            increasedAltitude = - Vector2.Distance(birdXYpos,  birdMarkerPos2D);
+        }
+        
         Vector3 crossProductAux = Vector3.Cross(slingshotBackwardDirection, markerToMarkerVector);
 
         if(crossProductAux.y > 0) {
@@ -46,10 +51,18 @@ public class GameLogic : MonoBehaviour
             bird.transform.position = new Vector3(birdXYpos.x, birdLaunchPlaceHolder.transform.position.y + increasedAltitude , birdXYpos.y);
         }
 
-        Debug.Log(bird.transform.position);
+        //Debug.Log(bird.transform.position);
 
         //Check user input
 
+        
+
+       
+
+    }
+
+    public bool isLeft(Vector2 a, Vector2 b, Vector2 c){
+        return ((b.x - a.x)*(c.y - a.y) - (b.y - a.y)*(c.x - a.x)) > 0;
     }
 
     void OnGUI() {
