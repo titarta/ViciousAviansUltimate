@@ -13,6 +13,6 @@ public class NightTime : MonoBehaviour
 
     void Update () 
 	{
-		light.intensity = 0;
+		light.intensity = 0.8f;
 	}
 }
