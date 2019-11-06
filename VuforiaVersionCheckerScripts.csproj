@@ -57,9 +57,6 @@
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.TestRunner">
  <HintPath>C:/Users/trvca/Desktop/RowdyViciousAviansUltimate/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>

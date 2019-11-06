@@ -77,7 +77,6 @@
      <Compile Include="Assets\Common\Scripts\TapHandler.cs" />
      <Compile Include="Assets\Common\Scripts\TrackableSettings.cs" />
      <Compile Include="Assets\Common\Scripts\VLog.cs" />
-     <Compile Include="Assets\Common\Scripts\Weather.cs" />
      <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
      <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
      <Compile Include="Assets\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
@@ -94,6 +93,7 @@
      <Compile Include="Assets\Scripts\NightTime.cs" />
      <Compile Include="Assets\Scripts\Sunny.cs" />
      <Compile Include="Assets\Scripts\TrackEventHandler.cs" />
+     <Compile Include="Assets\Scripts\Weather.cs" />
      <None Include="Assets\Mesh folder\NewSurfaceShader.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
