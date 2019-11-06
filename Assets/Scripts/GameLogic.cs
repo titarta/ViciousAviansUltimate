@@ -26,7 +26,8 @@ public class GameLogic : MonoBehaviour
         birdRB = bird.GetComponent<Rigidbody>();
         wasFired = false;
         birdTransform = bird.transform;
-        Physics.gravity = new Vector3(0, -1f, 0);
+        Physics.gravity = new Vector3(0, -10f, 0);
+        Physics.defaultSolverIterations = 1;
         triesText.text = "x" + numberTries.ToString();
     }
 
@@ -81,6 +82,15 @@ public class GameLogic : MonoBehaviour
                 rightElastic.SetActive(false);
                 leftElastic.SetActive(false);
             }
+
+            //check if bird is stopped
+            if(birdTransform.position.y < 1) {
+                if(numberTries == 0) {
+                    //loss
+                } else {
+                    resetTry();
+                }
+            }
         }
 
         
@@ -99,5 +109,12 @@ public class GameLogic : MonoBehaviour
         guideLine.SetActive(false);
         numberTries--;
         triesText.text = "x" + numberTries.ToString();
+    }
+
+    private void resetTry() {
+        wasFired = false;
+        guideLine.SetActive(true);
+        rightElastic.SetActive(true);
+        leftElastic.SetActive(true);
     }
 }
