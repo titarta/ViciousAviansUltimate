@@ -15,7 +15,7 @@ public class DirectionIndicator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-        gameObject.transform.position = (fireLocation.transform.position + bird.transform.position)/2.0F;
+        gameObject.transform.position = fireLocation.transform.position;
 
         // Rotation
         Vector3 dirV = Vector3.Normalize(bird.transform.position - fireLocation.transform.position);
