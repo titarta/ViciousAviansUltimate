@@ -1064,6 +1064,7 @@ GameObject:
   - component: {fileID: 6466861495945638666}
   - component: {fileID: 1095553654851517756}
   - component: {fileID: 1659917118557494684}
+  - component: {fileID: 2509307845162557069}
   m_Layer: 0
   m_Name: Boximon Fiery
   m_TagString: Untagged
@@ -1142,7 +1143,7 @@ BoxCollider:
   m_GameObject: {fileID: 1975194375736644}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1.1052377, z: 1}
   m_Center: {x: 0, y: 0.5275589, z: 0}
@@ -1158,6 +1159,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff17d3e11eff5b4fadd1853c5d85808, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &2509307845162557069
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975194375736644}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.45300704
+  m_Height: 1.3276575
+  m_Direction: 1
+  m_Center: {x: -0.012514114, y: 0.5388421, z: -0.007715225}
 --- !u!1 &1992369794795074
 GameObject:
   m_ObjectHideFlags: 0

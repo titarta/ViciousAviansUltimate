@@ -18,7 +18,8 @@ public class EnemyScript : MonoBehaviour
 
     void OnCollisionEnter(Collision collision) 
     {
-        if (collision.impulse.magnitude > 3) {
+        Debug.Log(collision.impulse.magnitude);
+        if (collision.impulse.magnitude > 5) {
             //Todo: animations and stuff, more adjustments
             GameObject.Destroy(gameObject);
         }
