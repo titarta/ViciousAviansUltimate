@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
+    public int numberTries;
     private bool wasFired;
     private Rigidbody birdRB;
     private Transform birdTransform;
@@ -16,6 +18,8 @@ public class GameLogic : MonoBehaviour
     public GameObject leftElastic;
     public Transform rightElasticTransform;
     public Transform leftElasticTransform;
+    public Text triesText;
+    public Text enemiesText;
 
     void Start()
     {
@@ -23,6 +27,7 @@ public class GameLogic : MonoBehaviour
         wasFired = false;
         birdTransform = bird.transform;
         Physics.gravity = new Vector3(0, -1f, 0);
+        triesText.text = "x" + numberTries.ToString();
     }
 
 
@@ -92,5 +97,7 @@ public class GameLogic : MonoBehaviour
         birdRB.AddForce(vecForce*5, ForceMode.VelocityChange);
         wasFired = true;
         guideLine.SetActive(false);
+        numberTries--;
+        triesText.text = "x" + numberTries.ToString();
     }
 }
