@@ -83,6 +83,7 @@
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\MainMenuScript.cs" />
      <Compile Include="Assets\Scripts\TrackEventHandler.cs" />
+     <None Include="Assets\Mesh folder\NewSurfaceShader.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\StreamingAssets\Vuforia\VuforiaMars_ModelTarget.xml" />
