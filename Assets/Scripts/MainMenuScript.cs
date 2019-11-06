@@ -18,7 +18,6 @@ public class MainMenuScript : MonoBehaviour
     }
 
     public void TutorialClick() {
-        Debug.Log("clicked");
         SceneManager.UnloadSceneAsync("MainMenu");
         SceneManager.LoadScene("SampleScene");
     }

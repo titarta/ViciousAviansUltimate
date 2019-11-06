@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
+    public GameObject gameLogicObj;
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameLogicObj.GetComponent<GameLogic>().increaseNumberMonsters();
     }
 
     // Update is called once per frame
@@ -21,6 +22,7 @@ public class EnemyScript : MonoBehaviour
         if (collision.impulse.magnitude > 5) {
             //Todo: animations and stuff, more adjustments
             GameObject.Destroy(gameObject);
+            gameLogicObj.GetComponent<GameLogic>().decreaseNumberMonsters();
         }
     }
 }

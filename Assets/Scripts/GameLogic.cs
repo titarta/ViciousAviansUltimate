@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameLogic : MonoBehaviour
@@ -20,6 +21,11 @@ public class GameLogic : MonoBehaviour
     public Transform leftElasticTransform;
     public Text triesText;
     public Text enemiesText;
+    private int numberMonsters;
+    public bool onTutorial;
+    private bool onWin;
+    private bool onLoss;
+    public string sceneName;
 
     void Start()
     {
@@ -29,6 +35,9 @@ public class GameLogic : MonoBehaviour
         Physics.gravity = new Vector3(0, -10f, 0);
         Physics.defaultSolverIterations = 1;
         triesText.text = "x" + numberTries.ToString();
+        if(onTutorial) {
+            //put imsge
+        }
     }
 
 
@@ -71,7 +80,16 @@ public class GameLogic : MonoBehaviour
 
             //Check user input
             if(Input.touchCount >= 1) {
-                shootBird();
+                if(onTutorial) {
+                    onTutorial = false;
+                    //retirar imagem
+                } else if (onLoss || onWin){
+                    SceneManager.UnloadSceneAsync(sceneName);
+                    SceneManager.LoadScene("mainMenu");
+                } else {
+                    shootBird();
+                }
+                
             }
 
         } else {
@@ -86,6 +104,7 @@ public class GameLogic : MonoBehaviour
             //check if bird is stopped
             if(birdTransform.position.y < 1) {
                 if(numberTries == 0) {
+                    onLoss = true;
                     //loss
                 } else {
                     resetTry();
@@ -104,7 +123,7 @@ public class GameLogic : MonoBehaviour
 
     private void shootBird() {
         Vector3 vecForce = birdLaunchPlaceHolder.position - birdTransform.position;
-        birdRB.AddForce(vecForce*5, ForceMode.VelocityChange);
+        birdRB.AddForce(vecForce*50, ForceMode.VelocityChange);
         wasFired = true;
         guideLine.SetActive(false);
         numberTries--;
@@ -112,9 +131,21 @@ public class GameLogic : MonoBehaviour
     }
 
     private void resetTry() {
+        if(numberMonsters == 0) {
+            onWin = true;
+            //Win
+        }
         wasFired = false;
         guideLine.SetActive(true);
         rightElastic.SetActive(true);
         leftElastic.SetActive(true);
+    }
+
+    public void increaseNumberMonsters() {
+        numberMonsters++;
+    }
+
+    public void decreaseNumberMonsters() {
+        numberMonsters--;
     }
 }
