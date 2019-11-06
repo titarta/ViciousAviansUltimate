@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class GameLogic : MonoBehaviour
 {
+    private int touchesDone = 0;
     public int numberTries;
     private bool wasFired;
     private Rigidbody birdRB;
@@ -28,6 +29,7 @@ public class GameLogic : MonoBehaviour
     public string sceneName;
     public GameObject winScreen;
     public GameObject loseScreen;
+    public GameObject tutorialScreen;
 
     void Start()
     {
@@ -38,7 +40,7 @@ public class GameLogic : MonoBehaviour
         Physics.defaultSolverIterations = 1;
         triesText.text = "x" + numberTries.ToString();
         if(onTutorial) {
-            //put imsge
+            tutorialScreen.SetActive(true);
         }
     }
 
@@ -81,10 +83,11 @@ public class GameLogic : MonoBehaviour
             }
 
             //Check user input
-            if(Input.touchCount >= 1) {
+            if(Input.touchCount >= touchesDone + 1 || Input.GetMouseButtonDown(1)) {
+                touchesDone++;
                 if(onTutorial) {
                     onTutorial = false;
-                    //retirar imagem
+                    tutorialScreen.SetActive(false);
                 } else {
                     shootBird();
                 }
@@ -137,6 +140,7 @@ public class GameLogic : MonoBehaviour
         guideLine.SetActive(true);
         rightElastic.SetActive(true);
         leftElastic.SetActive(true);
+        bird.transform.rotation = new Quaternion(-1, 0, 0, 0);
     }
 
     public void increaseNumberMonsters() {
