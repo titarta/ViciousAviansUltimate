@@ -26,6 +26,8 @@ public class GameLogic : MonoBehaviour
     private bool onWin;
     private bool onLoss;
     public string sceneName;
+    public GameObject winScreen;
+    public GameObject loseScreen;
 
     void Start()
     {
@@ -83,13 +85,9 @@ public class GameLogic : MonoBehaviour
                 if(onTutorial) {
                     onTutorial = false;
                     //retirar imagem
-                } else if (onLoss || onWin){
-                    SceneManager.UnloadSceneAsync(sceneName);
-                    SceneManager.LoadScene("mainMenu");
                 } else {
                     shootBird();
                 }
-                
             }
 
         } else {
@@ -105,7 +103,7 @@ public class GameLogic : MonoBehaviour
             if(birdTransform.position.y < 1) {
                 if(numberTries == 0) {
                     onLoss = true;
-                    //loss
+                    loseScreen.SetActive(true);
                 } else {
                     resetTry();
                 }
@@ -123,7 +121,7 @@ public class GameLogic : MonoBehaviour
 
     private void shootBird() {
         Vector3 vecForce = birdLaunchPlaceHolder.position - birdTransform.position;
-        birdRB.AddForce(vecForce*50, ForceMode.VelocityChange);
+        birdRB.AddForce(vecForce*5, ForceMode.VelocityChange);
         wasFired = true;
         guideLine.SetActive(false);
         numberTries--;
@@ -133,7 +131,7 @@ public class GameLogic : MonoBehaviour
     private void resetTry() {
         if(numberMonsters == 0) {
             onWin = true;
-            //Win
+            winScreen.SetActive(true);
         }
         wasFired = false;
         guideLine.SetActive(true);
@@ -143,9 +141,16 @@ public class GameLogic : MonoBehaviour
 
     public void increaseNumberMonsters() {
         numberMonsters++;
+        enemiesText.text = numberMonsters.ToString();
     }
 
     public void decreaseNumberMonsters() {
         numberMonsters--;
+        enemiesText.text = numberMonsters.ToString();
+        if(numberMonsters == 0) {
+            onWin = true;
+            winScreen.SetActive(true);
+            
+        }
     }
 }

@@ -87,6 +87,7 @@
      <Compile Include="Assets\Scripts\Cloudy.cs" />
      <Compile Include="Assets\Scripts\DirectionIndicator.cs" />
      <Compile Include="Assets\Scripts\DrawLine.cs" />
+     <Compile Include="Assets\Scripts\EndGameScript.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\MainMenuScript.cs" />

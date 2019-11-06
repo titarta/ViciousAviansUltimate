@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyScript : MonoBehaviour
 {
     public GameObject gameLogicObj;
+    public Transform center;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +15,10 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if((gameObject.transform.position - center.position).magnitude > 100) {
+            GameObject.Destroy(gameObject);
+            gameLogicObj.GetComponent<GameLogic>().decreaseNumberMonsters();
+        }
     }
 
     void OnCollisionEnter(Collision collision) 
