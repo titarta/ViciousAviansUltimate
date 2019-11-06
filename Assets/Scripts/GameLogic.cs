@@ -6,15 +6,23 @@ public class GameLogic : MonoBehaviour
 {
     private bool wasFired;
     private Rigidbody birdRB;
+    private Transform birdTransform;
     public Transform birdLaunchPlaceHolder;
     public GameObject bird;
     public GameObject slingshotMarker;
     public GameObject birdMarker;
-    // Start is called before the first frame update
+    public GameObject guideLine;
+    public GameObject rightElastic;
+    public GameObject leftElastic;
+    public Transform rightElasticTransform;
+    public Transform leftElasticTransform;
+
     void Start()
     {
         birdRB = bird.GetComponent<Rigidbody>();
         wasFired = false;
+        birdTransform = bird.transform;
+        Physics.gravity = new Vector3(0, -1f, 0);
     }
 
 
@@ -41,7 +49,7 @@ public class GameLogic : MonoBehaviour
 
             // Get bird Y position
             float increasedAltitude = 0;
-            if(isLeft(slingshotMarkerPos2D,birdMarkerPos2D,birdXYpos )) {
+            if(isLeft(slingshotMarkerPos2D,birdMarkerPos2D,birdXYpos)) {
                 increasedAltitude = Vector2.Distance(birdXYpos,  birdMarkerPos2D);
             } else {
                 increasedAltitude = - Vector2.Distance(birdXYpos,  birdMarkerPos2D);
@@ -60,6 +68,14 @@ public class GameLogic : MonoBehaviour
                 shootBird();
             }
 
+        } else {
+            Vector2 leftTr = leftElasticTransform.position;
+            Vector2 rightTr = rightElasticTransform.position;
+            Vector2 bird2Dpos = birdTransform.position;
+            if(isLeft(leftTr, rightTr, bird2Dpos)) {
+                rightElastic.SetActive(false);
+                leftElastic.SetActive(false);
+            }
         }
 
         
@@ -72,7 +88,9 @@ public class GameLogic : MonoBehaviour
     }
 
     private void shootBird() {
-        birdRB.AddForce(10, 0, 0, ForceMode.VelocityChange);
+        Vector3 vecForce = birdLaunchPlaceHolder.position - birdTransform.position;
+        birdRB.AddForce(vecForce*5, ForceMode.VelocityChange);
         wasFired = true;
+        guideLine.SetActive(false);
     }
 }
