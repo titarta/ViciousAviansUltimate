@@ -78,6 +78,7 @@
      <Compile Include="Assets\Common\Scripts\TrackableSettings.cs" />
      <Compile Include="Assets\Common\Scripts\VLog.cs" />
      <Compile Include="Assets\Scripts\DirectionIndicator.cs" />
+     <Compile Include="Assets\Scripts\DrawLine.cs" />
      <Compile Include="Assets\Scripts\EnemyScript.cs" />
      <Compile Include="Assets\Scripts\GameLogic.cs" />
      <Compile Include="Assets\Scripts\MainMenuScript.cs" />
