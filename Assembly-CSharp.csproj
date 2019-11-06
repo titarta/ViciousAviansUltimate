@@ -2,8 +2,6 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>latest</LangVersion>
-    <CscToolPath>C:\Program Files\Unity\Hub\Editor\2019.2.7f2\Editor\Data\Tools\RoslynScripts</CscToolPath>
-    <CscToolExe>unity_csc.bat</CscToolExe>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -79,7 +77,6 @@
      <Compile Include="Assets\Common\Scripts\TapHandler.cs" />
      <Compile Include="Assets\Common\Scripts\TrackableSettings.cs" />
      <Compile Include="Assets\Common\Scripts\VLog.cs" />
-     <Compile Include="Assets\Common\Scripts\Weather.cs" />
      <Compile Include="Assets\RainMaker\Demo\DemoScript.cs" />
      <Compile Include="Assets\RainMaker\Demo\DemoScript2D.cs" />
      <Compile Include="Assets\RainMaker\Demo\DemoScriptStartRainOnSpaceBar.cs" />
@@ -96,6 +93,7 @@
      <Compile Include="Assets\Scripts\NightTime.cs" />
      <Compile Include="Assets\Scripts\Sunny.cs" />
      <Compile Include="Assets\Scripts\TrackEventHandler.cs" />
+     <Compile Include="Assets\Scripts\Weather.cs" />
      <None Include="Assets\Mesh folder\NewSurfaceShader.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\Common\TextMeshPro\Resources\LineBreaking Leading Characters.txt" />
