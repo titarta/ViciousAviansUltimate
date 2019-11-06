@@ -11,7 +11,6 @@ public class DrawLine : MonoBehaviour
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        lineRenderer.SetWidth(.45f, .45f);
     }
 
     // Update is called once per frame
