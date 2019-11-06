@@ -103,7 +103,7 @@ public class GameLogic : MonoBehaviour
             }
 
             //check if bird is stopped
-            if(birdTransform.position.y < 1) {
+            if((bird.transform.position - slingshotMarker.transform.position).magnitude > 3000 || birdTransform.position.y < 1) {
                 if(numberTries == 0) {
                     onLoss = true;
                     loseScreen.SetActive(true);
